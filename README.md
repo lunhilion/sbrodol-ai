@@ -34,6 +34,21 @@ Mentre Caveman mira a ridurre i token fino all'osso con uno stile telegrafico da
 
 ## 📦 Installazione
 
+### CLI `skills` (qualsiasi agente)
+
+Il modo più rapido, e quello che funziona su Claude Code, Cursor, Copilot, Gemini
+e gli altri agenti supportati:
+
+```bash
+npx skills add lunhilion/sbrodol-ai
+```
+
+Per provarla senza installare nulla:
+
+```bash
+npx skills use lunhilion/sbrodol-ai@sbrodol-ai
+```
+
 ### Claude Code
 
 Come plugin, dal repository:
