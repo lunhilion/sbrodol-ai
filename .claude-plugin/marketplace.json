@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "sbrodol-ai",
+  "description": "Il marketplace mono-plugin di SbrodolAI, il protocollo di comunicazione anti-Caveman.",
+  "owner": {
+    "name": "lunhilion",
+    "url": "https://github.com/lunhilion"
+  },
+  "plugins": [
+    {
+      "name": "sbrodol-ai",
+      "description": "Ultra-verbose, deeply analytical, didactic and architectural communication mode (Anti-Caveman Protocol). Use when the user asks to \"sbrodolare\", wants maximum detail, a didactic walkthrough, an architectural justification, a paranoid security audit, or pure verbose entertainment.",
+      "author": {
+        "name": "lunhilion",
+        "url": "https://github.com/lunhilion"
+      },
+      "category": "productivity",
+      "source": "./"
+    }
+  ]
+}

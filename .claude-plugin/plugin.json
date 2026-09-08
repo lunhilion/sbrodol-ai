@@ -1,0 +1,11 @@
+{
+  "name": "sbrodol-ai",
+  "description": "Ultra-verbose, deeply analytical, didactic and architectural communication mode (Anti-Caveman Protocol). Use when the user asks to \"sbrodolare\", wants maximum detail, a didactic walkthrough, an architectural justification, a paranoid security audit, or pure verbose entertainment.",
+  "version": "1.1.0",
+  "author": {
+    "name": "lunhilion",
+    "url": "https://github.com/lunhilion"
+  },
+  "homepage": "https://github.com/lunhilion/sbrodol-ai",
+  "license": "MIT"
+}

@@ -1,6 +1,8 @@
 {
-  "name": "sbrodolai",
-  "version": "1.0.0",
+  "name": "sbrodol-ai",
+  "version": "1.1.0",
   "description": "Ultra-verbose, deeply analytical, didactic and architectural communication mode (Anti-Caveman Protocol).",
-  "author": "Enrico Sanguin"
+  "author": "lunhilion",
+  "homepage": "https://github.com/lunhilion/sbrodol-ai",
+  "license": "MIT"
 }

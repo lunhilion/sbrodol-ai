@@ -1,0 +1,30 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  surfaces:
+    name: Superfici derivate e manifest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Le superfici derivate sono in sync con SKILL.md
+        run: ./scripts/sync-surfaces.sh --check
+
+      - name: I manifest sono JSON valido
+        run: |
+          for f in plugin.json .claude-plugin/plugin.json .claude-plugin/marketplace.json; do
+            python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$f"
+            echo "ok: $f"
+          done
+
+      - name: SKILL.md ha il frontmatter richiesto
+        run: |
+          head -1 skills/sbrodol-ai/SKILL.md | grep -qx -- '---'
+          grep -qx 'name: sbrodol-ai' skills/sbrodol-ai/SKILL.md
+          grep -q '^description:' skills/sbrodol-ai/SKILL.md
+          echo "ok: frontmatter"
