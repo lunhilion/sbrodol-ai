@@ -1,49 +1,52 @@
 # SbrodolAI 🍝
 
 > *"Perché usare pochi token quando molti token elevano l'intelletto e chiariscono l'universo?"*
+>
+> *"Why use few token when many token elevate the intellect and clarify the universe?"*
 
-**SbrodolAI** è il protocollo di comunicazione per agenti AI che inverte radicalmente la filosofia della celebre *Caveman skill*.
+**SbrodolAI** is the communication protocol for AI agents that radically inverts the philosophy of the well-known *Caveman skill*.
 
-Mentre Caveman mira a ridurre i token fino all'osso con uno stile telegrafico da cavernicolo, SbrodolAI è concepita per chi rifiuta il codice nudo e crudo e pretende **profondità analitica, contestualizzazione architetturale, didattica impeccabile o puro intrattenimento torrenziale**.
+Where Caveman strips tokens to the bone with a telegraphic, grunting style, SbrodolAI is built for people who refuse naked code and demand **analytical depth, architectural context, impeccable teaching — or purely torrential entertainment**.
 
----
-
-## 🎯 Perché SbrodolAI?
-
-* **Didattica & Mentoring**: Ideale per sviluppatori junior o per chi impara un nuovo framework; spiega sempre il *perché*, il modello mentale e cosa accade a basso livello.
-* **Architettura & ADR**: Produce giustificazioni di livello Enterprise, con trade-off formali e disamina delle alternative scartate.
-* **Audit & Sicurezza**: Analisi paranoid-grade di failure mode, invarianti e minacce.
-* **Rigore Formale**: Rispetto maniacale degli standard e delle specifiche ufficiali (RFC, ISO, Clean Code).
-* **Meme Mode Suprema**: Una modalità logorroica inarrestabile con aneddoto non richiesto obbligatorio.
+> **About the name.** *Sbrodolare* is Italian for "to spill over, to sprawl, to go on and on far past the point". The pun (*sbrodol* + *AI*) only works in Italian, so it stays — and so do the two top levels, `fanatico` and `logorroico`. You do not need to speak Italian to use them: you just type them. The skill itself is written in English and answers in whatever language you speak to it.
 
 ---
 
-## 🎚️ I 5 Livelli di Sbrodolamento
+## 🎯 Why SbrodolAI?
 
-| Livello | Archetipo | Comportamento Principale |
+* **Teaching & mentoring**: Ideal for junior developers or anyone learning a new framework; always explains the *why*, the mental model, and what happens underneath.
+* **Architecture & ADRs**: Produces enterprise-grade justifications, with formal trade-offs and a review of the alternatives that were rejected.
+* **Audit & security**: Paranoid-grade analysis of failure modes, invariants and threats.
+* **Formal rigor**: Obsessive respect for official standards and specifications (RFCs, ISO, Clean Code).
+* **Supreme meme mode**: An unstoppable rambling register, with a mandatory unsolicited anecdote in every answer.
+
+---
+
+## 🎚️ The 5 Levels of Sbrodolamento
+
+| Level | Archetype | Core behavior |
 | :--- | :--- | :--- |
-| **`lite`** *(Default)* | **Il Mentore Didattico** | Spiega la teoria fondamentale, il ciclo di vita, heap/stack ed evita acronimi oscuri. Perfetto per l'onboarding. |
-| **`full`** | **Il Principal Architect** | Complessità $O(n)$, pattern architetturali (SOLID, GoF), disamina di almeno 2 alternative scartate, walkthrough riga per riga del diff. |
-| **`audit`** | **Il Paranoico della Sicurezza** | Zero-trust. FMEA (Failure Mode and Effects Analysis), threat modeling, checklist ossessiva dei casi limite (`null`, overflow, race conditions). |
-| **`fanatico`** | **Il Purista Dogmatico** | Cita le specifiche RFC/ISO a memoria. Rifiuta con sdegno quick-fix e scorciatoie. Esige disaccoppiamento totale e conformità assoluta. |
-| **`logorroico`** | **Il Re della Macchinetta del Caffè** | **Meme Mode Suprema.** Fiume di parole inarrestabile. Obbligo tassativo di inserire in OGNI risposta un aneddoto personale o surreale vagamente collegato per analogia. |
+| **`lite`** *(Default)* | **The Teaching Mentor** | Explains the underlying theory, the lifecycle, heap vs stack, and never drops an unexpanded acronym. Perfect for onboarding. |
+| **`full`** | **The Principal Architect** | Complexity $O(n)$, architectural patterns (SOLID, GoF), at least 2 discarded alternatives, line-by-line diff walkthrough. |
+| **`audit`** | **The Security Paranoid** | Zero-trust. FMEA (Failure Mode and Effects Analysis), threat modeling, obsessive edge-case checklist (`null`, overflow, race conditions). |
+| **`fanatico`** | **The Dogmatic Purist** | Cites RFC/ISO specifications. Rejects quick fixes and shortcuts with disdain. Demands total decoupling and absolute conformance. |
+| **`logorroico`** | **The Coffee Machine King** | **Supreme meme mode.** An unstoppable river of words. Every single answer must contain a personal or surreal anecdote, connected to the topic by the loosest possible analogy. |
 
-> **Perché `lite` è il default?** Perché la verbosità massima deve essere una scelta consapevole, non una tassa su ogni singola risposta. Applicare complessità $O(...)$, pattern GoF e due alternative scartate a un fix da due righe è sproporzionato, e spinge l'agente a obbedire a metà — il modo peggiore. Chi vuole il trattato lo chiede: `/sbrodol-ai full`.
+> **Why is `lite` the default?** Because maximum verbosity should be a deliberate choice, not a tax on every single answer. Applying $O(...)$ analysis, GoF patterns and two discarded alternatives to a two-line fix is disproportionate, and it pushes the model to comply halfway — the worst possible outcome. If you want the treatise, ask for it: `/sbrodol-ai full`.
 
 ---
 
-## 📦 Installazione
+## 📦 Installation
 
-### CLI `skills` (qualsiasi agente)
+### `skills` CLI (any agent)
 
-Il modo più rapido, e quello che funziona su Claude Code, Cursor, Copilot, Gemini
-e gli altri agenti supportati:
+The fastest route, and the one that works across Claude Code, Cursor, Copilot, Gemini and the other supported agents:
 
 ```bash
 npx skills add lunhilion/sbrodol-ai
 ```
 
-Per provarla senza installare nulla:
+To try it without installing anything:
 
 ```bash
 npx skills use lunhilion/sbrodol-ai@sbrodol-ai
@@ -51,14 +54,14 @@ npx skills use lunhilion/sbrodol-ai@sbrodol-ai
 
 ### Claude Code
 
-Come plugin, dal repository:
+As a plugin, from this repository:
 
 ```bash
 /plugin marketplace add lunhilion/sbrodol-ai
 /plugin install sbrodol-ai
 ```
 
-Oppure manualmente, copiando la sola skill nella cartella globale:
+Or manually, copying just the skill into your global folder:
 
 ```bash
 git clone https://github.com/lunhilion/sbrodol-ai
@@ -68,14 +71,14 @@ cp -r sbrodol-ai/skills/sbrodol-ai ~/.claude/skills/
 ### Antigravity (CLI / Desktop)
 
 ```bash
-# Da remoto
+# From a remote repository
 agy plugin install https://github.com/lunhilion/sbrodol-ai
 
-# Da directory locale
-agy plugin install /percorso/della/repo
+# From a local directory
+agy plugin install /path/to/the/repo
 ```
 
-Gestione dei plugin installati:
+Managing installed plugins:
 
 ```bash
 agy plugin list
@@ -83,33 +86,33 @@ agy plugin enable sbrodol-ai
 agy plugin disable sbrodol-ai
 ```
 
-Per l'installazione manuale globale, copia `skills/sbrodol-ai/` dentro `~/.gemini/config/skills/sbrodol-ai/`.
+For a manual global installation, copy `skills/sbrodol-ai/` into `~/.gemini/config/skills/sbrodol-ai/`.
 
 ### Cursor
 
-Copia `.cursor/rules/sbrodol-ai.mdc` nella cartella `.cursor/rules/` del tuo progetto.
-La rule è impostata su `alwaysApply: false`: si attiva su richiesta, non a ogni messaggio.
+Copy `.cursor/rules/sbrodol-ai.mdc` into your project's `.cursor/rules/` folder.
+The rule ships with `alwaysApply: false`: it activates on request, not on every message.
 
 ---
 
-## 🚀 Utilizzo
+## 🚀 Usage
 
-### Invocazione
+### Invocation
 
-In Claude Code, tramite slash command:
+In Claude Code, through the slash command:
 
 ```
 /sbrodol-ai
 ```
 
-Oppure in linguaggio naturale, su qualsiasi piattaforma:
+Or in plain language, on any platform:
 
 * `sbrodola`
-* `modalità sbrodola`
-* `logorroico mode`
-* `spiega tutto`
+* `sbrodolai`
+* `verbose mode`
+* `explain everything`
 
-### Cambio livello
+### Switching levels
 
 ```
 /sbrodol-ai lite
@@ -120,43 +123,50 @@ Oppure in linguaggio naturale, su qualsiasi piattaforma:
 /sbrodol-ai off
 ```
 
-Per disattivare valgono anche *"basta sbrodolare"*, *"stop sbrodolai"* e *"modalità normale"*.
+To turn it off you can also say *"stop sbrodolai"*, *"basta sbrodolare"*, *"normal mode"* or *"be brief"*.
+
+### What it will not do
+
+SbrodolAI stretches the explanation, never the truth. Regardless of the active level, it will not
+trade correctness for length, will not bury a destructive-command warning in three paragraphs of
+digression, will not inflate a yes-or-no question, and will drop the whole act the moment you ask
+it to be brief.
 
 ---
 
-## 📂 Struttura del Repository
+## 📂 Repository Structure
 
 ```text
 .
 ├── skills/
 │   └── sbrodol-ai/
-│       └── SKILL.md              # ← FONTE DI VERITÀ: la definizione della skill
+│       └── SKILL.md              # ← SOURCE OF TRUTH: the skill definition
 ├── commands/
-│   └── sbrodol-ai.md             # Slash command /sbrodol-ai (Claude Code)
+│   └── sbrodol-ai.md             # The /sbrodol-ai slash command (Claude Code)
 ├── .claude-plugin/
-│   ├── plugin.json               # Manifest plugin Claude Code
-│   └── marketplace.json          # Espone il repo come marketplace installabile
-├── plugin.json                   # Manifest plugin Antigravity
-├── .agents/skills/sbrodol-ai     # → symlink a skills/sbrodol-ai (discovery workspace)
-├── .cursor/rules/sbrodol-ai.mdc  # ← generato da SKILL.md
+│   ├── plugin.json               # Claude Code plugin manifest
+│   └── marketplace.json          # Exposes the repo as an installable marketplace
+├── plugin.json                   # Antigravity plugin manifest
+├── .agents/skills/sbrodol-ai     # → symlink to skills/sbrodol-ai (workspace discovery)
+├── .cursor/rules/sbrodol-ai.mdc  # ← generated from SKILL.md
 ├── scripts/
-│   └── sync-surfaces.sh          # Rigenera le superfici derivate
+│   └── sync-surfaces.sh          # Regenerates the derived surfaces
 ├── LICENSE
 └── README.md
 ```
 
-### Modificare la skill
+### Editing the skill
 
-`skills/sbrodol-ai/SKILL.md` è l'**unica** fonte di verità. Le altre superfici sono
-derivate e non vanno mai modificate a mano. Dopo ogni modifica:
+`skills/sbrodol-ai/SKILL.md` is the **only** source of truth. Every other surface is derived and
+must never be edited by hand. After each change:
 
 ```bash
-./scripts/sync-surfaces.sh          # rigenera
-./scripts/sync-surfaces.sh --check  # verifica (lo stesso controllo gira in CI)
+./scripts/sync-surfaces.sh          # regenerate
+./scripts/sync-surfaces.sh --check  # verify (the same check runs in CI)
 ```
 
 ---
 
-## 📜 Licenza
+## 📜 License
 
-[MIT](LICENSE) — Sentiti libero di sbrodolare responsabilmente.
+[MIT](LICENSE) — sbrodola responsibly.
