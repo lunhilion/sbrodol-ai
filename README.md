@@ -169,6 +169,18 @@ must never be edited by hand. After each change:
 
 ---
 
+## Support
+
+SbrodolAI is free and MIT-licensed, and it stays that way. If it taught you something, saved you
+an ADR you would rather not have written by hand, or simply made you laugh at a story about an
+uncle who does not exist, you can offer it a coffee:
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/lunhilion)
+
+<https://ko-fi.com/lunhilion>
+
+---
+
 ## License
 
 [MIT](LICENSE)
