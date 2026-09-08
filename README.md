@@ -12,7 +12,7 @@ Where Caveman strips tokens to the bone with a telegraphic, grunting style, Sbro
 
 ---
 
-## 🎯 Why SbrodolAI?
+## Why SbrodolAI?
 
 * **Teaching & mentoring**: Ideal for junior developers or anyone learning a new framework; always explains the *why*, the mental model, and what happens underneath.
 * **Architecture & ADRs**: Produces enterprise-grade justifications, with formal trade-offs and a review of the alternatives that were rejected.
@@ -22,7 +22,7 @@ Where Caveman strips tokens to the bone with a telegraphic, grunting style, Sbro
 
 ---
 
-## 🎚️ The 5 Levels of Sbrodolamento
+## The 5 Levels of Sbrodolamento
 
 | Level | Archetype | Core behavior |
 | :--- | :--- | :--- |
@@ -36,7 +36,7 @@ Where Caveman strips tokens to the bone with a telegraphic, grunting style, Sbro
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### `skills` CLI (any agent)
 
@@ -95,7 +95,7 @@ The rule ships with `alwaysApply: false`: it activates on request, not on every 
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### Invocation
 
@@ -134,7 +134,7 @@ it to be brief.
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 .
@@ -167,7 +167,7 @@ must never be edited by hand. After each change:
 
 ---
 
-## 📜 License
+## License
 
 [MIT](LICENSE)
 
