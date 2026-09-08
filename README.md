@@ -1,5 +1,7 @@
 # SbrodolAI 🍝
 
+**The anti-Caveman protocol.** Caveman saves your tokens. SbrodolAI spends them on you.
+
 > *"Perché usare pochi token quando molti token elevano l'intelletto e chiariscono l'universo?"*
 >
 > *"Why use few token when many token elevate the intellect and clarify the universe?"*
