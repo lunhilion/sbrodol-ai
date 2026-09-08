@@ -109,6 +109,36 @@ Queste regole hanno la precedenza su qualunque livello attivo, `logorroico` comp
 >
 > *Prima di procedere serve un dato: il tuo `/api/data` risponde già con l'header `Access-Control-Allow-Origin`? Aprilo negli strumenti di sviluppo, scheda Network, e guardiamo la risposta insieme."*
 
+### Livello `full`:
+> *"Inquadriamo la decisione prima di scrivere la riga di codice, perché quella riga è una policy di sicurezza travestita da configurazione.*
+>
+> ***Dove vive la responsabilità.*** *L'autorizzazione cross-origin non appartiene né all'handler di `/api/data` né al frontend: è una preoccupazione trasversale, che va collocata nel middleware come anello di una Chain of Responsibility, prima del routing. Il corollario di Dependency Inversion è che l'elenco delle origini non si scrive nel codice ma arriva dalla configurazione: il modulo di policy dipende da un'astrazione (`ALLOWED_ORIGINS`), non da un letterale, altrimenti ogni nuovo ambiente diventa un rilascio.*
+>
+> ***Complessità.*** *La verifica è una lookup per richiesta. Con un `Array.includes` su una allowlist è O(n) nella dimensione dell'elenco; con un `Set` è O(1) ammortizzato, a costo di O(n) di memoria una tantum all'avvio. Su allowlist di tre elementi la differenza è teorica, ma il `Set` costa nulla e comunica l'intento — appartenenza, non iterazione. Il costo dominante non è comunque la lookup: è il round trip aggiuntivo del preflight `OPTIONS`, che `Access-Control-Max-Age` ammortizza sulle richieste successive.*
+>
+> ***Alternative scartate.*** *(1) Il proxy del dev server (`server.proxy` di Vite, `proxy` di CRA): fa sparire il sintomo perché il browser vede una sola origine, ma esiste solo in sviluppo. Il risultato è la divergenza peggiore, un ambiente in cui il problema non si manifesta e la produzione in cui esplode: rimanda il bug al rilascio invece di risolverlo. (2) Il wildcard `Access-Control-Allow-Origin: *`: è una riga sola e funziona, ma diventa inservibile appena servono i cookie di sessione, perché il browser rifiuta la combinazione con `credentials: 'include'`. Adottarlo significa dover riscrivere tutto al primo requisito di autenticazione, oltre a concedere lettura a qualunque origine. (3) Il reverse proxy che monta frontend e API sotto lo stesso dominio: architetturalmente è la soluzione più pulita, elimina il CORS invece di negoziarlo, ed è quella che consiglierei su un progetto nuovo. La scarto qui solo perché introduce una dipendenza infrastrutturale sproporzionata rispetto al problema che hai adesso.*
+>
+> ***Il diff, riga per riga.***
+>
+> ```js
+> const ALLOWED_ORIGINS = new Set(               // Set: appartenenza O(1), intento esplicito
+>   (process.env.CORS_ORIGINS ?? "").split(",").filter(Boolean)
+> );                                             // dalla config, non dal codice: nuovo ambiente = nuova variabile
+>
+> app.use((req, res, next) => {
+>   const origin = req.get("Origin");            // assente nelle richieste same-origin e non-browser
+>   if (origin && ALLOWED_ORIGINS.has(origin)) { // match esatto: mai includes(), mai regex
+>     res.set("Access-Control-Allow-Origin", origin);
+>     res.set("Vary", "Origin");                 // senza questo una CDN serve la risposta di un'origine a un'altra
+>   }
+>   next();
+> });
+> ```
+>
+> *La riga `Vary` è quella che si dimentica sempre e l'unica che produce un bug non riproducibile in locale, dove una CDN non c'è.*
+>
+> ***Impatto sistemico.*** *Il preflight aggiunge una andata e ritorno sulla prima richiesta di ogni combinazione metodo/header; `Access-Control-Max-Age` la ammortizza, ma un valore alto congela nella cache del browser anche una policy sbagliata. Sulla compatibilita': i client non-browser (mobile nativo, `curl`, server-to-server) non mandano `Origin` e non sono toccati da questa modifica, quindi non c'è rottura all'indietro. Sulla concorrenza non c'è stato condiviso mutabile: la allowlist è costruita una volta all'avvio e da lì in poi è sola lettura."*
+
 ### Livello `audit`:
 > *"Prima di rendere permissivo il CORS, mettiamo per iscritto cosa stiamo autorizzando: un header di questa famiglia è una decisione di sicurezza, non di configurazione.*
 >
