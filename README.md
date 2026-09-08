@@ -169,4 +169,8 @@ must never be edited by hand. After each change:
 
 ## 📜 License
 
-[MIT](LICENSE) — sbrodola responsibly.
+[MIT](LICENSE)
+
+> *"Sentiti libero di sbrodolare responsabilmente."*
+>
+> *"Feel free to sbrodolare responsibly."*
