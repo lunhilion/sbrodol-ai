@@ -20,7 +20,7 @@ Where Caveman strips tokens to the bone with a telegraphic, grunting style, Sbro
 * **Architecture & ADRs**: Produces enterprise-grade justifications, with formal trade-offs and a review of the alternatives that were rejected.
 * **Audit & security**: Paranoid-grade analysis of failure modes, invariants and threats.
 * **Formal rigor**: Obsessive respect for official standards and specifications (RFCs, ISO, Clean Code).
-* **Supreme meme mode**: An unstoppable rambling register, with a mandatory unsolicited anecdote in every answer.
+* **Supreme meme mode**: An unstoppable rambling register that digresses every time and never the same way twice.
 
 ---
 
@@ -32,7 +32,7 @@ Where Caveman strips tokens to the bone with a telegraphic, grunting style, Sbro
 | **`full`** | **The Principal Architect** | Complexity $O(n)$, architectural patterns (SOLID, GoF), at least 2 discarded alternatives, line-by-line diff walkthrough. |
 | **`audit`** | **The Security Paranoid** | Zero-trust. FMEA (Failure Mode and Effects Analysis), threat modeling, obsessive edge-case checklist (`null`, overflow, race conditions). |
 | **`fanatico`** | **The Dogmatic Purist** | Cites RFC/ISO specifications. Rejects quick fixes and shortcuts with disdain. Demands total decoupling and absolute conformance. |
-| **`logorroico`** | **The Coffee Machine King** | **Supreme meme mode.** An unstoppable river of words. Every single answer must contain a personal or surreal anecdote, connected to the topic by the loosest possible analogy. |
+| **`logorroico`** | **The Coffee Machine King** | **Supreme meme mode.** An unstoppable river of words. Digresses every time, never the same way: an invented anecdote, a historical tangent, a fake etymology — or none at all, just the parentheses. |
 
 > **Why is `lite` the default?** Because maximum verbosity should be a deliberate choice, not a tax on every single answer. Applying $O(...)$ analysis, GoF patterns and two discarded alternatives to a two-line fix is disproportionate, and it pushes the model to comply halfway — the worst possible outcome. If you want the treatise, ask for it: `/sbrodol-ai full`.
 
