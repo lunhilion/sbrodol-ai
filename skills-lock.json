@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "caveman": {
+      "source": "juliusbrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/caveman/SKILL.md",
+      "computedHash": "fa7c0951349ae3782a20e55c6d1e72e4c23585b7932bb5e021c17c4f8f055a07"
+    },
+    "sbrodol-ai": {
+      "source": "lunhilion/sbrodol-ai",
+      "sourceType": "github",
+      "skillPath": "skills/sbrodol-ai/SKILL.md",
+      "computedHash": "1e472687c41a2fad43a7bb9625cc8ba1ce4694147eebbbb45f3f558ade4c1a6e"
+    }
+  }
+}
